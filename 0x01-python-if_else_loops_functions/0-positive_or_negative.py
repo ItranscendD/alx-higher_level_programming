@@ -8,5 +8,5 @@ if number > 0:
     print("is positive")
 elif number == 0:
     print("is zero")
-else number < 0:
+else:
     print("is negative")

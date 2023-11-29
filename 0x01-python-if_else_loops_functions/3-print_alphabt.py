@@ -1,11 +1,5 @@
 #!/usr/bin/python3
 
-for i in range(ord('a'), ord('z') + 1):
-
-    # Skip 'q' and 'e'
-    if chr(i) != 'q' and chr(i) != 'e':
-        print("{}".format(chr(i)), end='')
-
-# Print a newline at the end
-print()
+# Use a single print function with string format to print the alphabet, excluding 'q' and 'e'
+print("".join("{}".format(chr(i)) for i in range(ord('a'), ord('z') + 1) if chr(i) != 'q' and chr(i) != 'e'))
 

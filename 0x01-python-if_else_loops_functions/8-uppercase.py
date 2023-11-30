@@ -8,9 +8,10 @@ def uppercase(s):
         else:
             result += char
 
-    print("{}".format(result), end='')
+    print("{}".format(result))
 
 # Test cases
 if __name__ == "__main__":
-    uppercase("best")
-    uppercase("Best School 98 Battery street")
+    uppercase("Holberton")
+    uppercase("Holberton School")
+    uppercase("Holberton School, 98 battery street")

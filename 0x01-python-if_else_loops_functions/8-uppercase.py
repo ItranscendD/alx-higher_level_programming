@@ -13,5 +13,7 @@ def uppercase(s):
 # Test cases
 if __name__ == "__main__":
     uppercase("Holberton")
+
     uppercase("Holberton School")
+
     uppercase("Holberton School, 98 battery street")

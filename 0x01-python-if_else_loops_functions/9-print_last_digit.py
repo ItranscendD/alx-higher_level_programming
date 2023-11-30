@@ -11,9 +11,8 @@ def print_last_digit(number):
     return last_digit
 
 # Test cases
-if __name__ == "__main__":
+if _ _name_ _ == "_ _main_ _":
     print_last_digit(98)
     print_last_digit(0)
     r = print_last_digit(-1024)
     print(r)
-

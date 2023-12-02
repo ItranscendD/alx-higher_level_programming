@@ -7,6 +7,8 @@ def no_c(my_string):
     return filtered_string
 
 # Example usage:
+
+
 if __name__ == "__main__":
     test_strings = ["Best School", "Chicago", "C is fun!"]
     for test_string in test_strings:

@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-Square = __import__('1-square').Square
+"""Defines a square."""
 
-my_square = Square(3)
-print(type(my_square))
-print(my_square.__dict__)
 
-try:
-    print(my_square.size)
-except Exception as e:
-    print(e)
+class Square:
+    """Represents a square with a private size attribute."""
+    
+    def __init__(self, size):
+        """Initializes a new Square instance.
 
-try:
-    print(my_square.__size)
-except Exception as e:
-    print(e)
+        Args:
+            size (int): The size of the square.
+        """
+        self.__size = size

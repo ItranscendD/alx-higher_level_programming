@@ -1,18 +1,28 @@
 #!/usr/bin/python3
-Square = __import__('3-square').Square
+"""Defines a square."""
 
-my_square_1 = Square(3)
-print("Area: {}".format(my_square_1.area()))
 
-try:
-    print(my_square_1.size)
-except Exception as e:
-    print(e)
+class Square:
+    """Represents a square with a private size attribute."""
 
-try:
-    print(my_square_1.__size)
-except Exception as e:
-    print(e)
+    def __init__(self, size=0):
+        """Initializes a new Square instance.
 
-my_square_2 = Square(5)
-print("Area: {}".format(my_square_2.area()))
+        Args:
+            size (int, optional): The size of the square. Defaults to 0.
+        """
+        self.__size = size
+
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+
+        if size < 0:
+            raise ValueError("size must be >= 0")
+
+    def area(self):
+        """Calculates and returns the area of the square.
+
+        Returns:
+            int: The area of the square.
+        """
+        return self.__size ** 2

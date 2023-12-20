@@ -1,26 +1,17 @@
 #!/usr/bin/python3
+safe_print_integer = __import__('1-safe_print_integer').safe_print_integer
 
-def safe_print_list(my_list=[], x=0):
-    try:
-        count = 0
-        for i in range(x):
-            print("{}".format(my_list[i]), end="")
-            count += 1
-        print()
-        return count
-    except IndexError:
-        print()
-        return count
+value = 89
+has_been_print = safe_print_integer(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
 
-if __name__ == "__main__":
-  
-    my_list = [1, 2, 3, 4, 5]
+value = -89
+has_been_print = safe_print_integer(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
 
-    nb_print = safe_print_list(my_list, 2)
-    print("nb_print: {:d}".format(nb_print))
-
-    nb_print = safe_print_list(my_list, len(my_list))
-    print("nb_print: {:d}".format(nb_print))
-
-    nb_print = safe_print_list(my_list, len(my_list) + 2)
-    print("nb_print: {:d}".format(nb_print))
+value = "School"
+has_been_print = safe_print_integer(value)
+if not has_been_print:
+    print("{} is not an integer".format(value))
